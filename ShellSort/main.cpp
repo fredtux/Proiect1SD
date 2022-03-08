@@ -31,7 +31,7 @@ void shellsort(vector<int> &v) {
     while (gap > 0) {
         for (j = 0; j < v.size(); ++j) {
             for (i = j; i < v.size(); i += gap) {
-                for (k = i; k > 0; k -= gap) {
+                for (k = i; k > j; k -= gap) {
                     if (k - gap >= j && v[k] < v[k - gap]) {
                         swap(v[k], v[k - gap]);
                     }
