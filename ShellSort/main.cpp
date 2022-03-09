@@ -2,6 +2,7 @@
 #include <vector>
 #include <unordered_map>
 #include <time.h>
+#include <iostream>
 
 using namespace std;
 
@@ -76,6 +77,10 @@ int main() {
             results[i] = timePassed;
         else
             results[i] = -1.0;
+
+        fout << "Test " << i + 1 << ": " << timePassed << "\n" << flush;
+
+        cout << i << "\n";
     }
 
     fin.close();
